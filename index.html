@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="rangecon">
+    <input type="range" id="range" value="0" min="0" max="100">
+    <div id="inimg">
+    <img src="sun.png" alt="" id="sun">
+    <div id="bcircle">
+        <div id="inbcircle"></div>
+    </div>
+</div>
+</div>
+    <div id="forty">
+        <div id="wire"></div>
+        <div id="lamp">
+            <div id="oval"></div>
+            <div id="oval1">
+                <div id="bulb2">
+                    <div id="bulb2shine"></div>
+                </div>
+            </div>
+            <div id="bulb"></div>
+            <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        </div>
+        
+    </div>
+
+    <div id="sixty">
+        <div id="visible">
+        <div id="temp"></div>
+        <div id="barsix1" class="barsix"></div> 
+        <div id="barsix2" class="barsix"></div>
+        </div>
+        <img src="book.png" alt="" id="book">
+    </div>
+
+    <script>
+        const div = document.getElementById('temp');
+        function updateRotationAngle() {
+        const w = div.offsetWidth;
+        const h = div.offsetHeight;
+        const ra = `${Math.atan(w / h) * (180 / Math.PI)}deg`;
+        document.getElementById("barsix1").style.rotate='-'+ra;
+        document.getElementById("barsix2").style.rotate=ra;
+        }
+        updateRotationAngle();
+        window.addEventListener('resize', updateRotationAngle);
+    </script>
+    <script src="js.js">
+
+    </script>
+</body>
+</html>
