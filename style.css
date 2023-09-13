@@ -157,10 +157,10 @@ body{
 #book
 {
     position:absolute;
-    top:100%;
+    top:60%;
     left:50%;
     height:min(20vw,20vh);
-    transform:translate(-50%,-150%);
+    transform:translateX(-50%);
     filter:brightness(0%);
 }
 #rangecon
